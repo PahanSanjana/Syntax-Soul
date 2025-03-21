@@ -233,10 +233,21 @@ article { display: none; }
 }
 
 
-
 .avatar-box {
     background: var(--bg-gradient-onyx);
-    border-radius: 20px;
+    border-radius: 30px; /* Adjusted */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.avatar-box img {
+    border-radius: 30%; /* Ensures circular shape */
+    width: 100px; /* Adjust to desired size */
+    height: 100px; /* Keep height same as width */
+    object-fit: cover; /* Prevents distortion */
+    display: block;
 }
 
 .info-content .name {
@@ -464,15 +475,6 @@ article { display: none; }
     scroll-snap-align: center;
 }
 
-.testimonials-avatar-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(15px, -25px);
-    background: var(--bg-gradient-onyx);
-    border-radius: 14px;
-    box-shadow: var(--shadow1);
-}
 
 .testimonials-text {
     color: var(--light-gray);
@@ -569,13 +571,6 @@ article { display: none; }
     .modal-close-btn:hover, .modal-close-btn:focus { opacity: 1; }
     .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
-.modal-avatar-box {
-    background: var(--bg-gradient-onyx);
-    width: max-content;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow2);
-}
 
 .modal-img-wrapper > img { display: none; }
 
@@ -1108,9 +1103,7 @@ textarea.form-input {
 
     .sidebar-info { gap: 25px; }
 
-    .avatar-box { border-radius: 30px; }
-        .avatar-box img { width: 120px; }
-
+  
     .info-content .name { margin-bottom: 15px; }
     .info-content .title { padding: 5px 10px; }
 
@@ -1173,13 +1166,7 @@ textarea.form-input {
         padding-top: 25px;
     }
 
-    .testimonials-avatar-box {
-        transform: translate(30px, -30px);
-        border-radius: 28px;
-    }
-
-        .testimonials-avatar-box img { width: 80px; }
-
+  
     .testimonials-item-title {
         margin-bottom: 10px;
         margin-left: 95px;
@@ -1207,13 +1194,7 @@ textarea.form-input {
         align-items: center;
     }
 
-    .modal-avatar-box {
-        border-radius: 18px;
-        margin-bottom: 0;
-    }
-
-        .modal-avatar-box img { width: 65px; }
-
+  
     .modal-img-wrapper > img {
         display: block;
         position: relative;
@@ -1289,7 +1270,6 @@ textarea.form-input {
         max-width: 680px;
     }
 
-    .modal-avatar-box img { width: 80px; }
 
     .article-title { padding-bottom: 20px; }
 
@@ -1425,7 +1405,7 @@ textarea.form-input {
 
     .sidebar-info { flex-direction: column; }
 
-    .avatar-box img { width: 150px; }
+    
 
     .info-content .name {
         white-space: nowrap;
